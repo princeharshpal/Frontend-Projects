@@ -1,0 +1,49 @@
+* {
+  text-align: center;
+}
+.boxContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.boxContainer .uprLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxContainer .uprLine .btnBox,
+.boxContainer .lwrLine .btnBox {
+  width: 200px;
+  height: 200px;
+  border: 5px solid black;
+  margin: 5px;
+  border-radius: 30px;
+}
+
+.boxContainer .lwrLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red{
+  background-color: #ff595e;
+}
+
+.green{
+  background-color: #8ac926;
+}
+
+.blue{
+  background-color: #1982c4;
+}
+
+.yellow{
+  background-color: #ffca3a;
+}
+
+.flash {
+  background-color: white;
+}
+

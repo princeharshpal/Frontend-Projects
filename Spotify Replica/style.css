@@ -1,0 +1,480 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+body {
+  background-color: #000;
+  color: #fff;
+}
+.navbar {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+.navbar .logo {
+  width: 25%;
+}
+.navbar .logo img {
+  cursor: pointer;
+  height: 3rem;
+  margin-left: 1rem;
+}
+.navbar .searchbar {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.navbar .searchbar .home-btn {
+  cursor: pointer;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  border-radius: 50rem;
+  background-color: #1f1f1f;
+}
+.navbar .searchbar .home-btn img {
+  height: 1.75rem;
+}
+.navbar .searchbar .home-btn:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+.navbar .searchbar .home-btn i {
+  font-size: 1.75rem;
+}
+.navbar .searchbar .search {
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  width: 25rem;
+  height: 3rem;
+  border-radius: 50rem;
+  background-color: #1f1f1f;
+}
+.navbar .searchbar .search:hover {
+  background-color: #2a2a2a;
+}
+.navbar .searchbar .search i {
+  opacity: 0.7;
+  font-size: 1.75rem;
+}
+.navbar .searchbar .search input {
+  width: 80%;
+  color: #fff;
+  margin-left: 0.75rem;
+  height: 1.5rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.navbar .nav-btns {
+  display: flex;
+  align-items: center;
+}
+.navbar .nav-btns .btn {
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+  border-radius: 50rem;
+  font-weight: 700;
+  border: none;
+  padding: 0.5rem 0.85rem;
+}
+.navbar .nav-btns .btn:hover {
+  transform: scale(1.02);
+}
+.navbar .nav-btns .btn i {
+  font-weight: 200;
+  opacity: 0.8;
+  font-size: 1.25rem;
+}
+.navbar .bell {
+  opacity: 0.8;
+  cursor: pointer;
+  margin: 0.25rem 1rem 0 2rem;
+}
+.navbar .bell:hover {
+  opacity: 1;
+}
+.main-content {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+}
+.main-content .sidebar {
+  background-color: #121212;
+  width: 25%;
+  height: 100%;
+  margin: 0 0.25rem 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.main-content .sidebar .sidebar-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #121212;
+  height: 4rem;
+}
+.main-content .sidebar .sidebar-navbar .library {
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  background-color: #121212;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.main-content .sidebar .sidebar-navbar .library:hover {
+  opacity: 1;
+}
+.main-content .sidebar .sidebar-navbar .library img {
+  margin: 0 0.5rem 0 1rem;
+  height: 1.5rem;
+}
+.main-content .sidebar .sidebar-navbar .icons {
+  /* border: 1px solid white; */
+  display: flex;
+}
+.main-content .sidebar .sidebar-navbar .icons div {
+  margin: 0 1rem 0 0;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.main-content .sidebar .sidebar-navbar .icons div:hover {
+  background-color: #1e1e1e;
+}
+.main-content .sidebar .sidebar-navbar .icons div i {
+  font-size: 1.25rem;
+}
+.main-content .sidebar .cards {
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+}
+.main-content .sidebar .cards .card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #1f1f1f;
+  margin-bottom: 1rem;
+}
+.main-content .sidebar .cards .card p {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 0.85rem;
+}
+.main-content .sidebar .cards .card button {
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  border-radius: 50rem;
+  border: none;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+}
+.main-content .sidebar .cards .card button:hover {
+  transform: scale(1.03);
+}
+.main-content .content {
+  position: relative;
+  width: 75%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: #121212;
+  margin: 0 0.5rem 0.5rem 0.25rem;
+  overflow: auto;
+}
+.main-content .content::-webkit-scrollbar {
+  appearance: none;
+  width: 0.5rem;
+}
+.main-content .content::-webkit-scrollbar-track {
+  background-color: #1f1f1f;
+}
+.main-content .content::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+}
+.main-content .content .content-navbar {
+  background-color: #121212;
+  position: sticky;
+  top: 0;
+  padding: 0.5rem 0.75rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+.main-content .content .content-navbar button {
+  margin-right: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50rem;
+  border: none;
+}
+.main-content .content .content-navbar button:hover {
+  background-color: #2a2a2a;
+}
+.main-content .content .card-container {
+  padding: 0.85rem;
+  /* border: 1px solid white; */
+}
+.main-content .content .card-container .cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 2rem 0;
+  /* border: 1px solid white; */
+}
+.main-content .content .card-container .cards .card {
+  position: relative;
+  cursor: pointer;
+  width: 8rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+.main-content .content .card-container .cards .card .playbtn {
+  cursor: pointer;
+  position: absolute;
+  top: 7.25rem;
+  right: 1.25rem;
+  background-color: #000;
+  height: 2.75rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50rem;
+  opacity: 0;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+.main-content .content .card-container .cards .card:hover .playbtn {
+  opacity: 1;
+  transform: translateY(-2rem);
+}
+.main-content .content .card-container .cards .card:hover {
+  background-color: #1f1f1f;
+}
+.main-content .content .card-container .cards .card img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.main-content .content .card-container .cards .card .card-title {
+  margin: 0.15rem 0 0.15rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.main-content .content .card-container .cards .card .card-desc {
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+.main-content .content .content-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.main-content .content .content-footer .coulumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  width: 11rem;
+  height: 20rem;
+}
+.main-content .content .content-footer .coulumn span {
+  opacity: 0.7;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+.main-content .content .content-footer .coulumn span:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+.main-content .content .content-footer .social-links {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  width: 11rem;
+  height: 20rem;
+  gap: 0.5rem;
+}
+.main-content .content .content-footer .social-links span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1f;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50rem;
+  font-size: 1.25rem;
+}
+.main-content .content .content-footer .social-links span:hover {
+  background-color: #727272;
+}
+.main-content .content .content-footer .another-links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  padding: 3rem 0 5rem 0;
+  margin: 0 1rem;
+  border-top: 1px solid #2a2a2a;
+}
+.main-content .content .content-footer .another-links span {
+  margin: 0 0.5rem;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.main-content .content .content-footer .another-links .links span:hover {
+  opacity: 1;
+}
+.main-content .content .content-footer .another-links span:hover {
+  opacity: 1;
+}
+.footer {
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  bottom: 0;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.footer .song-sec {
+  height: 100%;
+  width: 25%;
+}
+.footer .song-sec {
+  display: flex;
+  align-items: center;
+}
+.footer .song-sec img {
+  height: 100%;
+  border-radius: 0.35rem;
+}
+.footer .song-sec .song-desc {
+  cursor: pointer;
+  margin: 0 1rem;
+  font-weight: 500;
+}
+.footer .song-sec .song-desc .song-name {
+  font-size: 0.85rem;
+}
+.footer .song-sec .song-desc .song-info {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-top: 0.25rem;
+}
+.footer .song-sec .song-desc .song-name:hover,
+.song-info:hover {
+  text-decoration: underline;
+}
+.footer .song-sec i {
+  font-size: 1rem;
+  font-weight: 100;
+  opacity: 0.6;
+}
+.footer .song-sec i:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.footer .scrollbar-sec {
+  height: 100%;
+  width: 50%;
+}
+.footer .scrollbar-sec .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.footer .scrollbar-sec .btns img {
+  height: 1rem;
+  margin: 0 0.75rem;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.footer .scrollbar-sec .btns img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+.footer .scrollbar-sec .scrollbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .scrollbar-sec .scrollbar .currt,
+.endt {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+.footer .scrollbar-sec .scrollbar input {
+  appearance: none;
+  background-color: transparent;
+  width: 60%;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.footer .scrollbar-sec .scrollbar input::-webkit-slider-runnable-track {
+  background-color: #4d4d4d;
+  border-radius: 50rem;
+  height: 0.2rem;
+}
+.footer .scrollbar-sec .scrollbar input::-webkit-slider-thumb {
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #1bd760;
+  margin-top: -6px;
+}
+
+.footer .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 25%;
+  margin-right: 0.5rem;
+}
+.footer .buttons img {
+  height: 1.25rem;
+  opacity: 0.7;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.footer .buttons img:hover {
+  opacity: 1;
+}
+.footer .buttons input {
+  appearance: none;
+  background-color: transparent;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.footer .buttons input::-webkit-slider-runnable-track {
+  background-color: #4d4d4d;
+  border-radius: 50rem;
+  height: 0.2rem;
+}
+.footer .buttons input::-webkit-slider-thumb {
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #1bd760;
+  margin-top: -6px;
+}

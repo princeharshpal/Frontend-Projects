@@ -1,0 +1,20 @@
+
+ body::-webkit-scrollbar{
+    display: none;
+ }
+.projectBox video{
+  transition: opacity 0.5s ease;
+}
+
+  .cursor {
+    position: fixed;  /* Ensures the cursor is positioned relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none; /* Makes sure the cursor doesn't block interactions */
+    z-index: 9999;  /* Places the cursor above all other elements */
+    mix-blend-mode: difference;
+  }
